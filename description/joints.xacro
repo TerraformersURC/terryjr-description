@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <robot name="terryjr" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<joint name="right_wheel_link_to_base_link_joint" type="continuous">
+<joint name="right_wheel_link_to_base_link_joint" type="fixed">
   <origin xyz="0.0 -0.192 0.307734" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="wheel_link_right"/>
   <axis xyz="-0.0 -1.0 0.0"/>
 </joint>
 
-<joint name="left_wheel_link_to_base_link_joint" type="continuous">
+<joint name="left_wheel_link_to_base_link_joint" type="fixed">
   <origin xyz="0.0 0.192 0.307734" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="wheel_link_left"/>
@@ -43,28 +43,28 @@
   <axis xyz="0.0 1.0 -0.0"/>
 </joint>
 
-<joint name="mid_balance_link_to_base_link_joint" type="continuous">
+<joint name="mid_balance_link_to_base_link_joint" type="fixed">
   <origin xyz="0.295 0.0 0.310934" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="mid_balance_link"/>
   <axis xyz="1.0 0.0 -0.0"/>
 </joint>
 
-<joint name="right_balance_link_to_mid_balance_link_joint" type="continuous">
+<joint name="right_balance_link_to_mid_balance_link_joint" type="fixed">
   <origin xyz="0.0 -0.220009 0.0" rpy="0 0 0"/>
   <parent link="mid_balance_link"/>
   <child link="right_balance_link"/>
   <axis xyz="1.0 0.0 -0.0"/>
 </joint>
 
-<joint name="left_balance_link_to_mid_balance_link_joint" type="continuous">
+<joint name="left_balance_link_to_mid_balance_link_joint" type="fixed">
   <origin xyz="0.0 0.220009 0.0" rpy="0 0 0"/>
   <parent link="mid_balance_link"/>
   <child link="left_balance_link"/>
   <axis xyz="1.0 0.0 -0.0"/>
 </joint>
 
-<gazebo>
+<!-- <gazebo>
   <joint name="right_balance_link_to_right_wheel_link_joint" type="continuous">
     <pose>0.0 0.0 0.0 0 0 0</pose>
     <parent>right_wheel_link</parent>
@@ -84,6 +84,6 @@
       <xyz>0.0 1.0 -0.0</xyz>
     </axis>
   </joint>
-</gazebo>
+</gazebo> -->
 
 </robot>
