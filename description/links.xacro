@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <robot name="terryjr" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+<link name="base_footprint"/>
+
 <link name="base_link">
   <inertial>
     <origin xyz="0.00015786853655922194 -2.501616775090207e-11 0.3198890536270612" rpy="0 0 0"/>
